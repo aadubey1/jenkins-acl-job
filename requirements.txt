@@ -1,0 +1,14 @@
+
+azure==4.0.0
+azure-identity
+azure-keyvault-secrets
+
+PyByteBuffer~=1.0.5
+pyspark~=3.1.1
+requests~=2.25.1
+urllib3~=1.26.4
+setuptools~=47.1.0
+azure-storage-file-datalake --pre
+PyYAML~=5.4.1
+delta~=0.4.2
+ // python3 -m pip install --user -r requirements.txt

@@ -1,0 +1,48 @@
+{
+    "name": "set-acl",
+    "new_cluster": {
+        "spark_version": "8.1.x-scala2.12",
+        "spark_conf": {
+          "spark.databricks.delta.preview.enabled": "true"
+        },
+        "node_type_id": "Standard_DS3_v2",
+        "enable_elastic_disk": true,
+        "azure_attributes": {
+          "first_on_demand": 1,
+          "availability": "ON_DEMAND_AZURE",
+          "spot_bid_max_price": -1
+        },
+        "num_workers": 2
+      },
+      "libraries": [
+        {
+          "pypi": {
+            "package": "azure==4.0.0"
+          }
+        },
+        {
+          "pypi": {
+            "package": "azure-keyvault-secrets"
+          }
+        },
+        {
+          "pypi": {
+            "package": "azure-storage-file-datalake"
+          }
+        },
+        {
+          "pypi": {
+            "package": "azure-identity"
+          }
+        }],
+    "notebook_task": {
+    "notebook_path": "/Users/aadubey@gap.com/Set_ACL",
+    "base_parameters": {
+      "ContainerName": "aclviajenkins",
+      "StorageAccName": "gsta2dgdprawzone02",
+      "SPN": "g-spn-0n-datainsights01-gdp-datalake-01",
+      "ADGroup": "Azure-GDP-DataLake-NonProd",
+      "TopicName": "testdir3"
+    }
+    }
+}
